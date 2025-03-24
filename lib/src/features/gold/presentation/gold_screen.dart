@@ -20,7 +20,13 @@ class GoldScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Text('Live Kurs:',
                   style: Theme.of(context).textTheme.headlineMedium),
-              const SizedBox(height: 20),
+              const SizedBox(
+                height: 20,
+                child:
+                    StreamBuilder(stream: getGoldPriceStream, builder: (context, snapshot) {
+                      final 
+                    },),
+              ),
               // TODO: Verwende einen StreamBuilder, um den Goldpreis live anzuzeigen
               // statt des konstanten Platzhalters
               Text(
